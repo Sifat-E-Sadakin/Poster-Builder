@@ -195,6 +195,7 @@ body {
   font-size: 18px;
   font-weight: 500;
   border: none;
+  cursor: pointer;
 }
 
 .preview-wrapper {
@@ -215,4 +216,18 @@ body {
   transform: translateY(-50%);
   border-radius: 8px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.preview-wrapper .preview-box-wrapper {
+  height: calc(90vh - 70px);
+  overflow-y: scroll;
+}
+.preview-wrapper .preview-box-wrapper .preview-box {
+  margin: 20px 15px;
+}
+.preview-wrapper .preview-box-wrapper .preview-box .image-box img {
+  display: none;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }

@@ -32,4 +32,20 @@ getById("description-x").addEventListener("click", () => {
   getById("description-wrapper").style.display = "block";
 });
 
-document;
+getById("heading-input").addEventListener("keyup", () => {
+  getById("heading").innerText = getById("heading-input").value;
+});
+
+getById("file-upload").addEventListener("change", () => {
+  getById("image").style.display = "block";
+  const file = getById("file-upload").files[0];
+  getById("image").src = URL.createObjectURL(file);
+});
+
+getById("description-input").addEventListener("keyup", () => {
+  getById("description").innerText = getById("description-input").value;
+});
+
+getById("download-btn").addEventListener("click", () => {
+  
+});
