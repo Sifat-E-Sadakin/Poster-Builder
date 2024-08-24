@@ -34,18 +34,56 @@ getById("description-x").addEventListener("click", () => {
 
 getById("heading-input").addEventListener("keyup", () => {
   getById("heading").innerText = getById("heading-input").value;
+  getById("download-btn").style.display = "block";
 });
 
+getById("heading-left").addEventListener("click", () => {
+  getById("heading").style.textAlign = "left";
+});
+
+getById("heading-center").addEventListener("click", () => {
+  getById("heading").style.textAlign = "center";
+});
+
+getById("heading-right").addEventListener("click", () => {
+  getById("heading").style.textAlign = "right";
+});
+
+getById("heading-blue").addEventListener("click", () => {
+  getById("heading").style.color = "blue";
+});
+
+getById("heading-black").addEventListener("click", () => {
+  getById("heading").style.color = "black";
+});
+
+getById("heading-green").addEventListener("click", () => {
+  getById("heading").style.color = "green";
+});
 getById("file-upload").addEventListener("change", () => {
   getById("image").style.display = "block";
   const file = getById("file-upload").files[0];
   getById("image").src = URL.createObjectURL(file);
+  getById("download-btn").style.display = "block";
 });
 
 getById("description-input").addEventListener("keyup", () => {
   getById("description").innerText = getById("description-input").value;
+  getById("download-btn").style.display = "block";
 });
 
+const downloadURI = (uri, name) => {
+  var link = document.createElement("a");
+  link.download = name;
+  link.href = uri;
+  link.click();
+  document.body.removeChild(link);
+  delete link;
+};
+
 getById("download-btn").addEventListener("click", () => {
-  
+  convertHtmlToImage(getById("preview")).then(poster => {
+    var myImage = poster.toDataURL("image/png");
+    downloadURI("data:" + myImage, "preview.png");
+  });
 });
