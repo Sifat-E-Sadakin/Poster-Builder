@@ -33,6 +33,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   transform: translateY(-50%);
   border-radius: 8px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
@@ -75,6 +76,11 @@ body {
   font-weight: 500;
   transform: translateX(30px);
 }
+.components-wrapper .item-wrapper .box-title div:hover {
+  background-color: red;
+  color: whitesmoke;
+  transition: 300ms;
+}
 .components-wrapper .item-wrapper .item-box {
   border: 1px solid gray;
   border-radius: 4px;
@@ -106,6 +112,13 @@ body {
   background-color: whitesmoke;
   transform: translateY(-25%);
   border: 1px dashed gray;
+}
+.components-wrapper .item-wrapper .item-box .upload-box svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -160%);
+  font-size: 50px;
 }
 .components-wrapper .item-wrapper .item-box .upload-box div {
   position: absolute;
@@ -158,6 +171,19 @@ body {
   font-size: 16px;
   font-weight: 500;
   border: 1px solid gray;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.components-wrapper
+  .item-wrapper
+  .item-box
+  .btn-group-wrapper
+  .btn-group
+  button:hover {
+  background-color: rgb(216, 203, 203);
+  transition: 300ms;
 }
 .components-wrapper
   .item-wrapper
@@ -197,6 +223,33 @@ body {
   border: none;
   cursor: pointer;
 }
+.components-wrapper .btn-wrapper > :first-child button {
+  background-color: bisque;
+  color: rgb(192, 102, 102);
+}
+.components-wrapper .btn-wrapper > :first-child button:hover {
+  background-color: rgb(192, 102, 102);
+  color: bisque;
+  transition: 300ms;
+}
+.components-wrapper .btn-wrapper > :nth-child(2) button {
+  background-color: rgb(222, 214, 214);
+  color: rgb(98, 89, 89);
+}
+.components-wrapper .btn-wrapper > :nth-child(2) button:hover {
+  background-color: rgb(98, 89, 89);
+  color: rgb(222, 214, 214);
+  transition: 300ms;
+}
+.components-wrapper .btn-wrapper > :last-child button {
+  background-color: lightblue;
+  color: rgb(76, 76, 183);
+}
+.components-wrapper .btn-wrapper > :last-child button:hover {
+  background-color: rgb(76, 76, 183);
+  color: lightblue;
+  transition: 300ms;
+}
 
 .preview-wrapper {
   border-left: 2px solid red;
@@ -213,6 +266,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   transform: translateY(-50%);
   border-radius: 8px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
@@ -262,4 +316,96 @@ body {
   font-weight: 500;
   border: none;
   cursor: pointer;
+}
+.preview-wrapper .preview-box-wrapper .btn-box button:hover {
+  background-color: red;
+  color: whitesmoke;
+  transition: 300ms;
+}
+
+@media (max-width: 768px) {
+  .main-section {
+    flex-direction: column;
+    height: 100vh;
+    margin-top: 0;
+  }
+  .components-wrapper {
+    height: 100%;
+    width: 100%;
+  }
+  .components-wrapper .components-box {
+    height: 100%;
+  }
+  .components-wrapper .title-wrapper {
+    transform: translateY(0%);
+  }
+  .components-wrapper .item-wrapper {
+    margin: 10px 0;
+  }
+  .components-wrapper .item-wrapper .box-title {
+    transform: translateY(0%);
+  }
+  .components-wrapper .item-wrapper .item-box .input-box-wrapper {
+    transform: translateY(0%);
+  }
+  .components-wrapper .item-wrapper .item-box .upload-box {
+    transform: translateY(0%);
+  }
+  .components-wrapper .item-wrapper .item-box .text-box {
+    transform: translateY(0%);
+  }
+  .components-wrapper
+    .item-wrapper
+    .item-box
+    .btn-group-wrapper
+    .btn-group
+    button {
+    font-size: 14px;
+  }
+  .components-wrapper .btn-wrapper {
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+  }
+  .components-wrapper .btn-wrapper .item {
+    width: 100%;
+  }
+  .components-wrapper .btn-wrapper .item button {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .preview-wrapper {
+    height: 100%;
+    width: 100%;
+  }
+  .preview-wrapper .title-wrapper {
+    transform: translateY(0%);
+  }
+  .preview-wrapper .preview-box-wrapper {
+    height: 100%;
+  }
+  .preview-wrapper .preview-box-wrapper .preview-box {
+    margin: 10px 0;
+  }
+  .preview-wrapper .preview-box-wrapper .preview-box .heading-box {
+    font-size: 30px;
+    margin: 10px 0;
+  }
+  .preview-wrapper .preview-box-wrapper .preview-box .image-box {
+    margin: 10px 0;
+  }
+  .preview-wrapper .preview-box-wrapper .preview-box .image-box img {
+    display: none;
+  }
+  .preview-wrapper .preview-box-wrapper .preview-box .description-box {
+    font-size: 16px;
+  }
+  .preview-wrapper .preview-box-wrapper .btn-box {
+    margin: 0;
+  }
+  .preview-wrapper .preview-box-wrapper .btn-box button {
+    display: none;
+    padding: 10px;
+    font-size: 14px;
+  }
 }
