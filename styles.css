@@ -318,7 +318,7 @@ body {
   cursor: pointer;
 }
 .preview-wrapper .preview-box-wrapper .btn-box button:hover {
-  background-color: red;
+  background-color: blueviolet;
   color: whitesmoke;
   transition: 300ms;
 }
